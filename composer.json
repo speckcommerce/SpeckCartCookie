@@ -1,0 +1,26 @@
+{
+	"name" : "speckcommerce/speck-cart-cookie",
+	"type" : "library",
+	"authors" : [{
+			"name" : "Rob Shipley"
+		}
+	],
+	"keywords" : [
+		"zf2",
+		"speckcommerce",
+	],
+	"homepage" : "http://github.com/speckcommerce/SpeckCartCookie",
+	"require" : {
+		"php" : ">=5.4.*",
+		"zf-commons/zfc-base" : "0.1.*",
+		"zendframework/zendframework" : "2.*"
+	},
+	"autoload" : {
+		"psr-0" : {
+			"SpeckCartCookie" : "src/"
+		},
+		"classmap" : [
+			"./Module.php"
+		]
+	}
+}
