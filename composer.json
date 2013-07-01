@@ -11,7 +11,7 @@
 	],
 	"homepage" : "http://github.com/speckcommerce/SpeckCartCookie",
 	"require" : {
-		"php" : ">=5.4.*",
+		"php" : ">=5.4",
 		"zf-commons/zfc-base" : "0.1.*",
 		"zendframework/zendframework" : "2.*"
 	},
