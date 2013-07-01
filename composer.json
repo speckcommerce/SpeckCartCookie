@@ -7,7 +7,7 @@
 	],
 	"keywords" : [
 		"zf2",
-		"speckcommerce",
+		"speckcommerce"
 	],
 	"homepage" : "http://github.com/speckcommerce/SpeckCartCookie",
 	"require" : {
