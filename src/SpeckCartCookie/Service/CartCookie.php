@@ -5,9 +5,8 @@ namespace SpeckCartCookie\Service;
 use Zend\Session\Container;
 use Zend\Math\Rand;
 use SpeckCartCookie\Mapper\CartVerifierMapperInterface;
-use Zend\Http\Header\Cookie;
-use Zend\Http\PhpEnvironment\Request;
-use Zend\Http\PhpEnvironment\Response;
+use Zend\Stdlib\RequestInterface as Request;
+use Zend\Stdlib\ResponseInterface as Response;
 use Zend\Http\Header\SetCookie;
 use SpeckCart\Service\CartEvent;
 
@@ -20,9 +19,11 @@ class CartCookie
 
     public function retrieveCartVerifierCookie()
     {
-        $cookies = $this->getRequest()->getCookie();
-        if(isset($cookies['speckcart_verifier'])) {
-            $this->setSessionVariableFromVerifier($cookies['speckcart_verifier']);
+        if($this->getRequest() instanceof \Zend\Http\PhpEnvironment\Request) {
+            $cookies = $this->getRequest()->getCookie();
+            if (isset($cookies['speckcart_verifier'])) {
+                $this->setSessionVariableFromVerifier($cookies['speckcart_verifier']);
+            }
         }
     }
 
